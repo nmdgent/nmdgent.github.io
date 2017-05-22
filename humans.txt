@@ -1,0 +1,25 @@
+/* Specialization */
+Specialization: New Media Development
+Website: http://www.nmd.gent
+Email: nmd [at] groepen [dot] arteveldehs [dot] be
+Location: Ghent, Belgium
+
+/* Sub-domain */
+Company: Graphical and Digital Media
+Website: http://www.arteveldehs.be/
+Twitter: @ArteveldeGDM
+Location: Mariakerke (Ghent), Belgium
+
+/* Domain */
+Company: Artevelde University College Ghent
+Website: http://www.arteveldehs.be
+Twitter: @ArteveldeHS
+Email: info [at] arteveldehs [dot] be
+Location: Ghent, Belgium
+
+/* SITE */
+Last update: Always up-to-date
+Standards: HTML5, CSS3, JavaScript (ES6)
+Libraries: Modernizr, loDash, Handlebars, Google Maps, Liquid, ...
+Static Site Generator: Jekyll
+Software: Microsoft Visual Code, Adobe CC
