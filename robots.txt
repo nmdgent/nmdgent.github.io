@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /assets/css/
+Disallow: /assets/data/
+Disallow: /assets/fonts/
+Disallow: /assets/icons/
+Disallow: /assets/js/
+Disallow: /css/
+Disallow: /js/
+Disallow: /vendor/
+Sitemap: /sitemap.xml
