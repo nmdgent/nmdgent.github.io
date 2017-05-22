@@ -1,0 +1,77 @@
+# Site settings
+# -------------
+baseurl :  # the subpath of your site, e.g. /blog
+colour  : primary
+language: nl
+host    : 127.0.0.1
+port    : 4444
+
+# SEO
+# ---
+title       : 'New Media Development'
+subdomain   : 'Graphical and Digital Media'
+domain      : 'Artevelde University College Ghent'
+description : "We educate future talents in design and development for apps and webapplications."
+keywords    : 'portfolio, stories, grafische, digitale, media, gdm, arteveldehogeschool'
+author      : 'Bachelor of Graphical and Digital Media | Artevelde University College Ghent'
+copyright   : 'Copyright 2010-17 Artevelde University College Ghent. All Rights Reserved.'
+
+# Utilities
+# ---------
+words_per_minute: 60
+
+# Google Services
+# ---------------
+google-analytics-tracking_id  :  "UA-18202861-3"
+
+# Where things are from Jekyll
+# ----------------------------
+plugins_dir   : /_plugins
+layouts_dir   : /_layouts
+data_dir      : /_data
+includes_dir  : /_includes
+
+# Build settings
+# --------------
+gems:
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
+sass:
+  sass_dir: /_sass
+  style: compressed
+exclude:
+  - gulpfile
+  - bower_components/
+  - components/
+  - node_modules/
+  - src/
+  - Gemfile
+  - LICENSE
+  - package.json
+  - README.md
+
+# Outputting
+# ----------
+permalink:        "/blog/:year/:title/"
+paginate_path:    "/blog/page:num"
+paginate:         5
+
+# Collections
+# -----------
+collections:
+  faqs:
+    output: false
+
+# Defaults
+# --------
+defaults:
+  - scope:
+      type: faqs
+    values:
+      layout: default
