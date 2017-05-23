@@ -1,0 +1,23 @@
+<div class="row">
+{% for post in site.posts %}
+<div class="col-12 col-md-6 col-lg-4 col-xl-3">
+    <div class="card">
+        <picture class="card-img-top">
+            <img src="{{ post.thumbnail_url | prepend: '/assets/images/posts/' | prepend: relative_url | prepend: site.url }}" alt="Sfeerbeeld AppsForGhent Editie 7">
+        </picture>
+        <div class="card-block">
+            <h4 class="card-title">{{ post.title }}</h4>
+            <p class="card-text">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+        </div>
+        <div class="card-block">
+            <ul class="inline-list list-categories" style="margin-top:-1em;">
+                {% for category in post.categories %}
+                <li>{{ category }}</li>
+                {% endfor %}
+            </ul>
+            <a href="{{ post.url }}" class="card-link">Read more</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>

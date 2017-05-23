@@ -1,0 +1,40 @@
+{
+  "name": "nmd_jekyll_bootstrap4",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Starter boilerplate project for Jekyll with Bootstrap 4 and Browserify.",
+  "scripts": {
+    "js:clean": "rm -rf ./assets/plugins.js && rm -rf ./assets/plugins.min.js",
+    "js:lint": "jslint --nomen ./_source/js/*.js && jslint --nomen ./_source/js/modules/*.js",
+    "js:browserify": "browserify ./_source/js/plugins.js -o ./assets/js/plugins.min.js",
+    "js:min-uglify": "uglifyjs --compress --screw-ie8 -o ./assets/js/plugins.min.js -- ./assets/js/plugins.min.js",
+    "js:build:dev": "npm run js:lint && npm run js:clean && npm run js:browserify",
+    "js:build": "npm run js:build:dev && npm run js:min-uglify",
+    "js:watch": "nodemon --ext js --watch ./_source/js --exec 'npm run js:build'",
+    "css:clean": "rm -rf ./assets/css && mkdir ./assets/css",
+    "css:getbootstrap": "rm -rf ./_source/scss/bootstrap && cp -R ./node_modules/bootstrap/scss ./_source/scss/bootstrap",
+    "css:sass": "node-sass --include-path ./_source/scss --source-map ./assets/css/ --output-style compressed ./_source/scss/main.scss ./assets/css/main.min.css",
+    "css:build": "npm run css:getbootstrap && npm run css:clean && npm run css:sass",
+    "css:watch": "nodemon --ext scss --watch ./_source/scss --exec 'npm run css:lint && npm run css:build'",
+    "watch": "npm run js:watch & npm run css:watch",
+    "build": "npm run js:build && npm run css:build",
+    "build:full": "npm run build && jekyll build"
+  },
+  "author": "New Media Development",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.3.0",
+    "jslint": "^0.9.8",
+    "live-server": "^1.2.0",
+    "node-sass": "^3.13.1",
+    "nodemon": "^1.11.0",
+    "uglify-js": "^2.8.27"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "lunr": "^2.0.3",
+    "tether": "^1.4.0"
+  }
+}

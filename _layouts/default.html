@@ -5,10 +5,12 @@
 layout: shared/base 
 libs_styles: [] 
 base_styles: ['/assets/css/app.css'] 
-libs_scripts: ['/assets/vendor/lodash/lodash.js', '/assets/vendor/lunr/lunr.js'] 
+libs_scripts: ['/assets/js/plugins.min.js'] 
 base_scripts: ['/assets/js/app.js', '/assets/js/app.search.js']
 --- 
-
+{% include shared/header.html %}
 <main id="main" class="main" role="main">
-    {{ content }}
+    <div class="container">
+        {{ content }}
+    </div>
 </main>
